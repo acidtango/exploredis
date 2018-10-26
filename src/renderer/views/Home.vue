@@ -5,19 +5,19 @@
 </template>
 
 <script>
-import ConnectionForm from "@/views/ConnectionForm.vue";
+import ConnectionForm from '@/views/ConnectionForm.vue'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    ConnectionForm
-  }
-};
+    ConnectionForm,
+  },
+}
 </script>
 
 <style lang="scss">
 body {
-  background: #F7FAFD;
+  background: #f7fafd;
 }
 </style>
 
