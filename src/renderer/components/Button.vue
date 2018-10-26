@@ -5,7 +5,7 @@
     :disabled="disabled"
     :aria-label="label"
   >
-    {{label}}
+    <slot />
   </button>
 </template>
 
@@ -13,10 +13,24 @@
 export default {
   name: 'Button',
   props: {
-    label: String,
-    disabled: String,
+    /**
+     * Sets the button disabled state
+     */
+    disabled: {
+      type: String,
+      default: false,
+    },
+    /**
+     * Sets the button tab index
+     */
     tabindex: String,
-    type: String,
+    /**
+     * Sets the button type
+     */
+    type: {
+      type: String,
+      default: 'button',
+    },
   },
 }
 </script>
@@ -42,3 +56,13 @@ button {
   }
 }
 </style>
+
+<docs>
+This button is amazing, use it responsibly.
+
+## Examples
+
+```jsx
+<Button>Push Me</Button>
+```
+</docs>

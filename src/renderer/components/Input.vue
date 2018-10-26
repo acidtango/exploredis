@@ -2,7 +2,6 @@
   <label>
     {{label}}
     <input
-    :tabindex="tabindex"
     v-on="listeners"
     :type="type"
     :disabled="disabled"
@@ -19,20 +18,40 @@
 export default {
   name: 'Input',
   props: {
+    /**
+     * Sets the input value
+     */
     value: [String, Number],
+    /**
+     * Sets the input disabled state
+     */
     disabled: Boolean,
+    /**
+     * Sets the input readOnly state
+     */
     readonly: Boolean,
+    /**
+     * Sets the input type
+     */
     type: {
       type: String,
       default: 'text',
     },
+    /**
+     * Sets the input autocomplete state
+     */
     autocomplete: {
       type: String,
       default: 'off',
     },
+    /**
+     * Sets the label text
+     */
     label: String,
+    /**
+     * Sets the placeholder text
+     */
     placeholder: String,
-    tabindex: String,
   },
   computed: {
     listeners() {
@@ -66,3 +85,39 @@ input {
   margin: 0.5rem 0 1rem;
 }
 </style>
+
+<docs>
+This button is amazing, use it responsibly.
+
+## Examples
+
+#### Default:
+```jsx
+<Input />
+```
+
+#### With label:
+```jsx
+<Input label="email" />
+```
+
+#### With placeholder:
+```jsx
+<Input label="email" placeholder="harry@potter.com" />
+```
+
+#### With value:
+```jsx
+<Input label="email" value="harry@potter.com" />
+```
+
+#### Disabled:
+```jsx
+<Input label="email" value="harry@potter.com" disabled />
+```
+
+#### Read only:
+```jsx
+<Input label="email" value="harry@potter.com" readonly />
+```
+</docs>
