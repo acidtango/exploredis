@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import Button from '@/components/Button';
-import Input from '@/components/Input';
+import Button from '@/components/Button'
+import Input from '@/components/Input'
 
 export default {
-  name: "ConnectionForm",
+  name: 'ConnectionForm',
   components: { Button, Input },
   data() {
     return {
@@ -20,15 +20,15 @@ export default {
         host: '',
         port: '',
         password: '',
-      }
+      },
     }
   },
   methods: {
     onSubmit() {
       console.log(this.form)
-    }
-  }
-};
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

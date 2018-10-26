@@ -17,32 +17,32 @@
 
 <script>
 export default {
-  name: "Input",
+  name: 'Input',
   props: {
     value: [String, Number],
     disabled: Boolean,
     readonly: Boolean,
     type: {
       type: String,
-      default: 'text'
+      default: 'text',
     },
     autocomplete: {
       type: String,
-      default: 'off'
+      default: 'off',
     },
     label: String,
     placeholder: String,
-    tabindex: String
+    tabindex: String,
   },
   computed: {
     listeners() {
       return {
         ...this.$listeners,
-        input: event => this.$emit('input', event.target.value)
+        input: event => this.$emit('input', event.target.value),
       }
-    }
-  }
-};
+    },
+  },
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

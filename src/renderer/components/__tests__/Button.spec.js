@@ -5,7 +5,7 @@ describe('Button.vue', () => {
   it('renders correctly', () => {
     const label = 'Kenobi'
     const wrapper = shallowMount(Button, {
-      propsData: { label }
+      propsData: { label },
     })
     expect(wrapper.text()).toMatch(label)
   })

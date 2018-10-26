@@ -11,14 +11,14 @@
 
 <script>
 export default {
-  name: "Button",
+  name: 'Button',
   props: {
     label: String,
     disabled: String,
     tabindex: String,
     type: String,
-  }
-};
+  },
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -34,11 +34,11 @@ button {
   transition: background 0.2s ease-in;
 
   &:hover {
-   background: #4420be; // TODO: Use color functions?
+    background: #4420be; // TODO: Use color functions?
   }
 
   &:disabled {
-   background: #947af4; // TODO: Use color functions?
+    background: #947af4; // TODO: Use color functions?
   }
 }
 </style>
