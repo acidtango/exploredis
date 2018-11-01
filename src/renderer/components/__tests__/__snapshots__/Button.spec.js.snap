@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders a label 1`] = `<button type="button" label="Name"></button>`;
+
+exports[`<Button /> renders a placeholder 1`] = `<button type="button" label="Name" placeholder="Name"></button>`;
+
+exports[`<Button /> renders with an initial value 1`] = `<button type="button" label="Name" placeholder="Name" value="General Kenobi"></button>`;
+
+exports[`<Button /> renders with disabled state 1`] = `<button type="button" disabled="disabled" label="Name" placeholder="Anakin Skywalker"></button>`;
+
+exports[`<Button /> renders with readOnly state 1`] = `<button type="button" label="Name" placeholder="Name" readonly="true"></button>`;
