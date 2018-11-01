@@ -62,10 +62,10 @@ export default {
 .sidebar {
   background-color: #535f6e;
   margin: 0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 30%; // TODO: Use CSS Grid on parent
+  overflow-y: hidden;
+  min-width: 250px;
 }
 
 .input {
