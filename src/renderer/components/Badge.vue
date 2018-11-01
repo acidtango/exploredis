@@ -18,12 +18,12 @@ span {
   border-radius: 2px;
   color: white;
   display: flex;
-  font-family: 'Overpass Mono', monospace;
-  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 10px;
   font-weight: 600;
   height: 18px;
   justify-content: center;
-  width: 32px;
+  min-width: 36px;
 }
 </style>
 
