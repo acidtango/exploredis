@@ -1,7 +1,7 @@
 <template>
   <section class="database">
     <Sidebar />
-    <div>content</div>
+    <KeyDetail />
     <Footer />
   </section>
 </template>
@@ -9,10 +9,11 @@
 <script>
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
+import KeyDetail from './components/KeyDetail'
 
 export default {
   name: 'Database',
-  components: { Footer, Sidebar },
+  components: { KeyDetail, Footer, Sidebar },
 }
 </script>
 
