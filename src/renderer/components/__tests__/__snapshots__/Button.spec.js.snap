@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> renders a different type 1`] = `<button type="submit">Hello there</button>`;
+
+exports[`<Button /> renders correctly 1`] = `<button type="button">Hello there</button>`;
+
+exports[`<Button /> renders with disabled state 1`] = `<button type="button" disabled="disabled">Hello there</button>`;

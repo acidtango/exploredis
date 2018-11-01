@@ -39,3 +39,17 @@ npm run styleguide
 ```
 npm run styleguide:build
 ```
+
+## Tests
+
+### Run unit tests
+
+```
+npm run test:unit
+```
+
+### Run unit tests with watch mode
+
+```
+npm run test:unit:watch
+```

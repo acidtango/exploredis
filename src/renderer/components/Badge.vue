@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <span class="badge">
     <slot />
   </span>
 </template>
@@ -10,9 +10,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss" scoped>
-span {
+<style lang="scss" scoped>
+.badge {
   align-items: center;
   background: #8983be;
   border-radius: 2px;

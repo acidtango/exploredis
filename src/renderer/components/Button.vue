@@ -17,7 +17,7 @@ export default {
      * Sets the button disabled state
      */
     disabled: {
-      type: String,
+      type: Boolean,
       default: false,
     },
     /**
