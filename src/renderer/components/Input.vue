@@ -1,6 +1,6 @@
 <template>
   <label>
-    {{label}}
+    <span v-if="label">{{label}}</span>
     <input
     v-on="listeners"
     :type="type"
@@ -67,22 +67,32 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss" scoped>
 label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #6f7788;
-  font-weight: bold;
-  font-size: 15px;
+  display: block;
 }
+
+span {
+  font-size: 14px;
+  color: #6f7788;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
 input {
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 2px solid #cdd9ed;
-  color: #cbd1dc;
-  font-size: 16px;
-  line-height: 0;
+  width: 100%;
+  min-height: 32px;
+  transition: all 0.3s;
+  border: 0;
+  color: #333f4e;
+  background: rgba(194, 204, 217, 0.4);
   box-sizing: border-box;
-  margin: 0.5rem 0 1rem;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 12px;
+
+  &::placeholder {
+    color: #333f4e;
+  }
 }
 </style>
 
@@ -91,14 +101,9 @@ This button is amazing, use it responsibly.
 
 ## Examples
 
-#### Default:
+#### For search:
 ```jsx
-<Input />
-```
-
-#### With label:
-```jsx
-<Input label="email" />
+<Input placeholder="Search key names or patterns..." icon="search" />
 ```
 
 #### With placeholder:
