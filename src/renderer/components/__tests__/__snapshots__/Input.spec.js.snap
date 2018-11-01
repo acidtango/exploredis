@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> renders a label 1`] = `<label><span>Name</span> <input type="text" autocomplete="off" aria-label="Name"></label>`;
+
+exports[`<Input /> renders a placeholder 1`] = `<label><span>Name</span> <input type="text" autocomplete="off" placeholder="Name" aria-label="Name"></label>`;
+
+exports[`<Input /> renders by default 1`] = `
+<label>
+  <!----> <input type="text" autocomplete="off"></label>
+`;
+
+exports[`<Input /> renders with an initial value 1`] = `<label><span>Name</span> <input type="text" autocomplete="off" placeholder="Name" aria-label="Name"></label>`;
+
+exports[`<Input /> renders with disabled state 1`] = `<label><span>Name</span> <input type="text" disabled="disabled" autocomplete="off" placeholder="Anakin Skywalker" aria-label="Name"></label>`;
+
+exports[`<Input /> renders with readOnly state 1`] = `<label readonly="true"><span>Name</span> <input type="text" autocomplete="off" placeholder="Name" aria-label="Name"></label>`;
