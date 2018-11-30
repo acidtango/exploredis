@@ -1,22 +1,22 @@
 <template>
-<section>
-  <header>
-    <h4>
-      <span>type</span>
-      <span class="name">name</span>
-    </h4>
-    <nav>
-      <button>Add</button>
-      <button>Ref</button>
-    </nav>
-  </header>
-  <ul>
-    <li :key="key.name" v-for="key in keys">
-      <badge>{{type(key.type)}}</badge>
-      <span class="name">{{key.name}}</span>
-    </li>
-  </ul>
-</section>
+  <section>
+    <header>
+      <h4>
+        <span>type</span>
+        <span class="name">name</span>
+      </h4>
+      <nav>
+        <button>Add</button>
+        <button>Ref</button>
+      </nav>
+    </header>
+    <ul>
+      <li :key="key.name" v-for="key in keys">
+        <badge :background="backgrounds[key.type]">{{type(key.type)}}</badge>
+        <span class="name">{{key.name}}</span>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script>
@@ -25,6 +25,17 @@ import Badge from '@/components/Badge'
 export default {
   name: 'KeysList',
   components: { Badge },
+  data() {
+    return {
+      backgrounds: {
+        string: '#566DA6',
+        list: '#0F9AA0',
+        hash: '#BD4A9A',
+        set: '#03A27A',
+        zset: '#BD4A9A',
+      },
+    }
+  },
   props: {
     keys: {
       type: Array,

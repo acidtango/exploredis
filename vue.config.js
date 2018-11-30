@@ -12,6 +12,7 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       mainProcessFile: 'src/background/main.js',
+      mainProcessWatch: ['src/background/redis_events.js'],
     },
   },
   configureWebpack: {
