@@ -13,6 +13,7 @@
     "test:unit:watch": "vue-cli-service test:unit --watch"
   },
   "dependencies": {
+    "ioredis": "^4.2.0",
     "vue": "^2.5.17",
     "vue-codemirror": "~4.0.5",
     "vue-router": "^3.0.1",
