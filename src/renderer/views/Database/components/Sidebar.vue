@@ -6,28 +6,13 @@
 </template>
 
 <script>
-import { ipcRenderer } from 'electron'
 import KeysList from './KeysList'
 import Input from '@/components/Input'
 
 export default {
   name: 'Sidebar',
   components: { Input, KeysList },
-  data() {
-    return {
-      keys: [],
-    }
-  },
-  beforeMount() {
-    ipcRenderer.send('@REDIS/connect', {
-      port: 6379,
-      host: 'localhost',
-      password: '',
-      db: 0,
-    })
-
-    ipcRenderer.on('@REDIS/connected', (event, data) => (this.keys = data.keys))
-  },
+  props: ['keys'],
 }
 </script>
 

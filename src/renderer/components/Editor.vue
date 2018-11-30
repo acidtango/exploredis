@@ -49,7 +49,6 @@ export default {
 .cm-s-oceanic-next.CodeMirror,
 .cm-s-oceanic-next .CodeMirror-gutters {
   background: none;
-  /* background: red; */
 }
 
 .cm-s-oceanic-next .CodeMirror-linenumber {
