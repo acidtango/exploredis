@@ -1,7 +1,7 @@
 <template>
   <section class="sidebar">
     <Input type="text" placeholder="Search key names or patterns..." class="input"/>
-    <KeysList :keys="keys"/>
+    <KeysList :keys="keys" :currentKey="currentKey"/>
   </section>
 </template>
 
@@ -12,13 +12,13 @@ import Input from '@/components/Input'
 export default {
   name: 'Sidebar',
   components: { Input, KeysList },
-  props: ['keys'],
+  props: ['currentKey', 'keys'],
 }
 </script>
 
 <style lang="scss" scoped>
 .sidebar {
-  background-color: #535f6e;
+  background-color: #1e2231;
   margin: 0;
   display: flex;
   flex-direction: column;

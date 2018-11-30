@@ -1,7 +1,7 @@
 <template>
   <section class="database">
-    <Sidebar :keys="keys"/>
-    <KeyDetail :content="content"/>
+    <Sidebar :keys="keys" :currentKey="currentKey"/>
+    <KeyDetail :content="content" :currentKey="currentKey"/>
     <Footer/>
   </section>
 </template>
@@ -19,6 +19,7 @@ export default {
     return {
       keys: [],
       content: '',
+      currentKey: '',
     }
   },
   beforeMount() {
@@ -31,12 +32,11 @@ export default {
 
     ipcRenderer.on('@REDIS/connected', (event, data) => {
       this.keys = data.keys
-      console.log(data.keys[1].name)
-      ipcRenderer.send('@REDIS/KEY_FETCH', data.keys[0].name)
+      this.currentKey = data.keys[0].name
+      ipcRenderer.send('@REDIS/KEY_FETCH', this.currentKey)
     })
 
     ipcRenderer.on('@REDIS/KEY_FETCH_SUCCESS', (event, data) => {
-      console.log(data)
       this.content = data
     })
   },
@@ -45,7 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 .database {
-  background-color: #455262;
+  background-color: #252a3c;
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: 100vh;

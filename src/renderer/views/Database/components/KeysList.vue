@@ -11,7 +11,7 @@
       </nav>
     </header>
     <ul>
-      <li :key="key.name" v-for="key in keys">
+      <li :key="key.name" v-for="key in keys" :class="{ active: key.name === currentKey }">
         <badge :background="backgrounds[key.type]">{{type(key.type)}}</badge>
         <span class="name">{{key.name}}</span>
       </li>
@@ -40,6 +40,10 @@ export default {
     keys: {
       type: Array,
       default: [],
+    },
+    currentKey: {
+      type: String,
+      default: '',
     },
   },
   methods: {
@@ -88,12 +92,21 @@ ul {
 li {
   list-style: none;
   padding: 8px 12px;
-  color: white;
+  color: #7f95ac;
   font-family: 'Overpass Mono', monospace;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   display: flex;
   align-items: center;
+
+  &:nth-child(even) {
+    background-color: #222738;
+  }
+
+  &.active {
+    color: white;
+    background: rgba(106, 137, 255, 0.22);
+  }
 
   .name {
     margin-left: 12px;
@@ -101,10 +114,6 @@ li {
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 100%;
-  }
-
-  &:nth-child(even) {
-    background-color: rgba(69, 82, 98, 0.35);
   }
 }
 </style>
