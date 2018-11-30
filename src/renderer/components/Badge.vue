@@ -1,14 +1,20 @@
-<template>
-  <span class="badge">
-    <slot />
-  </span>
-</template>
-
 <script>
 export default {
   name: 'Badge',
+  props: {
+    background: {
+      type: String,
+      default: '#8983be',
+    },
+  },
 }
 </script>
+
+<template>
+  <span class="badge" :style="{ backgroundColor: background }">
+    <slot/>
+  </span>
+</template>
 
 <style lang="scss" scoped>
 .badge {
@@ -16,7 +22,7 @@ export default {
   background: #8983be;
   border-radius: 2px;
   color: white;
-  display: flex;
+  display: inline-flex;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   font-size: 10px;
   font-weight: 600;
